@@ -120,65 +120,193 @@
 // }
 
 
-// Task 1
-let max = (a, b) => a > b ? a : b
-console.log(max(4, 5));
+// // Task 1
+// let max = (a, b) => a > b ? a : b
+// console.log(max(4, 5));
 
-// Task 2
-let stepin = (a, b) => a ** b
-console.log(stepin(2, 3));
+// // Task 2
+// let stepin = (a, b) => a ** b
+// console.log(stepin(2, 3));
 
-let calc = (nn1, nn2, diya) => {
-    switch (diya) {
-        case "+":
-            return nn1 + nn2;
-            break;
-        case "-":
-            return nn1 - nn2;
-            break;
-        case "/":
-            return nn1 / nn2;
-            break;
-        case "*":
-            return nn1 * nn2;
-            break;
-    }
+// let calc = (nn1, nn2, diya) => {
+//     switch (diya) {
+//         case "+":
+//             return nn1 + nn2;
+//             
+//         case "-":
+//             return nn1 - nn2;
+//            
+//         case "/":
+//             return nn1 / nn2;
+//             
+//         case "*":
+//             return nn1 * nn2;
+//             
+//     }
+// }
+// // Task 3
+// console.log(calc(2, 3,"*"));
+
+
+// // Task 4
+
+// let ProsteNum = (nn1) => {
+//     let IsPrime = true;
+//     for(i = 2; i <= nn1/2; i++)
+//     {
+//         if(nn1 % i == 0)
+//         {
+//             IsPrime = false
+//         }
+//     }
+//     if(IsPrime == true)
+//     {
+//         console.log(`${nn1} is prime`)
+//     }
+//     else
+//     {
+//         console.log(`${nn1} no prime`)
+//     }
+// }
+
+// ProsteNum(97);
+
+// // Task 5
+
+// let Tablemnoz = (nn1) => {
+//     for(i = 2; i <= 9; i++)
+//     {
+//         console.log(`${nn1} * ${i} = ${nn1 * i}`)
+//     }
+
+// }
+
+// Tablemnoz(3);
+
+
+//Task 6
+// let prosto = (a, b) => {
+//     let dil = a / b
+    
+
+// }
+
+
+// Task 7
+let sum = (a, b = 0, c = 0, d = 0, e = 0) => {
+    return a + b + c + d + e
 }
-// Task 3
-console.log(calc(2, 3,"*"));
+console.log(sum(1, 2, 3, 4, 5));
+//Task 8
+let maxfive = (...args) => {
 
+    if (args.length > 0 && args.length <= 5) {
+        let maxnum = args[0];
+        for (let i = 0; i < args.length; i++) {
+            if (args[i] > maxnum)
+                maxnum = args[i]
 
-// Task 4
+        }
+        return maxnum
+    }
+    return -1
+}
+console.log(maxfive(1, 2, 3, 4, 5));
 
-let ProsteNum = (nn1) => {
-    let IsPrime = true;
-    for(i = 2; i <= nn1/2; i++)
-    {
-        if(nn1 % i == 0)
-        {
-            IsPrime = false
+//Task 9
+let parnineparni = (num1, num2, boolis) => {
+
+    if (num2 < num1) {
+        let temp = num1
+        num1 = num2
+        num2 = temp
+    }
+    if (boolis === true) {
+        for (let i = num1; i < num2; i++) {
+
+            if (i % 2 == 0) {
+                console.log(i)
+            }
         }
     }
-    if(IsPrime == true)
-    {
-        console.log(`${nn1} is prime`)
-    }
-    else
-    {
-        console.log(`${nn1} no prime`)
+    else {
+        for (let i = num1; i < num2; i++) {
+
+            if (i % 2 != 0) {
+                console.log(i)
+            }
+        }
     }
 }
 
-ProsteNum(97);
+parnineparni(1, 20, true);
 
-// Task 5
 
-let Tablemnoz = (nn1) => {
-    for(i = 2; i <= 9; i++)
-    {
-        console.log(`${nn1} * ${i} = ${nn1 * i}`)
+
+//Task 10
+let testyear = (year) => year % 4 == 0 && year % 100 != 0 || year % 400 == 0 ? true : false
+
+
+
+let date = (day, month, year) => {
+
+    let days = 0
+    switch (month) {
+        case 12:
+            days = 31;
+            break;
+        case 11:
+            days = 30;
+            break;
+        case 10:
+            days = 31;
+            break;
+        case 9:
+            days = 30;
+            break;
+        case 8:
+            days = 31;
+            break;
+        case 7:
+            days = 31;
+            break;
+        case 6:
+            days = 30;
+            break;
+        case 5:
+            days = 31;
+            break;
+        case 4:
+            days = 30;
+            break;
+        case 3:
+            days = 31;
+            break;
+        case 2:
+            if (testyear(year) == true) {
+                days = 29
+            }
+            else
+                days = 28
+            break;
+        case 1:
+            days = 31;
+            break;
     }
-    
+    if (day == days) {
+        day = 1
+        if (month == 12) {
+            month = 1
+            year += 1
+        }
+
+        else
+            month += 1
+    }
+    else if (day < days) {
+        day += 1
+    }
+    console.log(day + "." + month + "." + year)
 }
 
-Tablemnoz(3);
+date(28,2,2004)
