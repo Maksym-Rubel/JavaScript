@@ -1,0 +1,38 @@
+/* 
+.style_li{
+    background-color: black;
+    color:white;
+    border:double blue 5px;
+    padding: 10px;
+    text-shadow: 1px 1px 1px blue;
+}
+.top
+{
+    width: 100vw;
+    height: 0vh;
+    background-color: rgba(0,0,0,.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: 2s;
+  
+}
+.top:hover, .top button:hover
+{
+    cursor: pointer;
+}
+.top button
+{
+    width: 200px;
+    height: 100px;
+    font-size: 40px;
+}
+.show{
+    height: 100vh;
+}
+
+ */
