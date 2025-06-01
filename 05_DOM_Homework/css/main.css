@@ -1,0 +1,72 @@
+
+.wrapper {
+    position: relative;
+}
+
+#img1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 80vw;
+    height: 100vh;
+
+}
+
+#img2 {
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    z-index: 2;
+    width: 100px;
+    height: 100px;
+    transition: 1s;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f2f2f2;
+}
+
+
+.wrapper2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 200px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    background-color: rgb(239, 239, 239);
+    border-radius: 20px;
+
+}
+
+.circles{
+    flex-direction: column;
+    height: 80px;
+    width: 80px;
+    background-color: gainsboro;
+    border-radius: 100px;
+}
+.circleses{
+    display: flex;
+    justify-content: left;
+
+    gap: 10px;
+}
+#btn1
+{
+    width: 80px;
+    height: 80px;
+    background-color: azure;
+    border-width: 0px;
+    border-radius: 15px;
+    font-size: 25px;
+    font-weight: bolder;
+    margin: 10px;
+}
