@@ -49,3 +49,7 @@ for (let i = 0; i < arr.length; i++) {
     }
 }
 console.log(counter);
+
+//Task 9+
+let arrcopy = arr.filter((a) => a % 2 == 0);
+console.log(arrcopy.length)
