@@ -73,11 +73,16 @@ let words = word.trim().split(' ');
 console.log(words.length)
 
 //Task 4
-let text = "cascading style sheets"
-let words1 = text.trim().split(' ');
-let text1 = words1[0].at(0) + words1[1].at(0) + words1[2].at(0)
-console.log(text1.toUpperCase())
+let myfunc = (a)=>
+{
+    let words1 = text.trim().split(' ');
+    let text1 = words1[0].at(0) + words1[1].at(0) + words1[2].at(0)
+    console.log(text1.toUpperCase())
 
+}
+
+let text = "cascading style sheets"
+myfunc(text)
 
 //Task 5
 let palin = "12345678987654321"
