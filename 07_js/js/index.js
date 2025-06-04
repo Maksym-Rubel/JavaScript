@@ -75,7 +75,7 @@ console.log(words.length)
 //Task 4
 let myfunc = (a)=>
 {
-    let words1 = text.trim().split(' ');
+    let words1 = a.trim().split(' ');
     let text1 = words1[0].at(0) + words1[1].at(0) + words1[2].at(0)
     console.log(text1.toUpperCase())
 
