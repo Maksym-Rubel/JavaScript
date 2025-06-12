@@ -1,0 +1,28 @@
+thead{
+    background-color: #e6e6e6;
+    font-weight: bold;
+    
+    font-size: 20px;
+    
+}
+thead th{
+    padding: 10px;
+    
+}   
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #bbb9b9;
+}
+
+tbody {
+    font-size: 13px;
+    
+}
