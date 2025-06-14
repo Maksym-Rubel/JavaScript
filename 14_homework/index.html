@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <h2>Create new color</h2>
+    <form id="colorForm">
+        <label>Color:<br>
+            <input type="text" id="colorName">
+            <div class="error" id="nameError"></div>
+        </label><br><br>
+
+        <label>Type:<br>
+            <select id="colorType">
+                <option value="RGB">RGB</option>
+                <option value="RGBA">RGBA</option>
+                <option value="HEX">HEX</option>
+            </select>
+        </label><br><br>
+
+        <label>Code:<br>
+            <input type="text" id="colorCode">
+            <div class="error" id="codeError"></div>
+        </label><br><br>
+
+        <button id="saveBtn" type="submit">Save</button>
+    </form>
+
+    <h2>All colors</h2>
+    <div class="palette" id="palette">
+        <div class="color-box" style="background-color: rgb(154,205,50)">
+            YELLOWGREEN<br>RGB<br>154, 205, 50
+        </div>
+        <div class="color-box" style="background-color: rgba(0,139,139,1)">
+            DARKCYAN<br>RGBA<br>0, 139, 139, 1
+        </div>
+        <div class="color-box" style="background-color: #FF4500">
+            ORANGERED<br>HEX<br>#FF4500
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
