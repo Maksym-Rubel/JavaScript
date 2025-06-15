@@ -1,7 +1,7 @@
 div {
     width: 100vw;
     height: 100vh;
-
+    position: relative;
 }
 
 #mimg {
@@ -10,6 +10,32 @@ div {
     height: 100%;
 
 }
+
+img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+
+#cimg {
+    width: 500px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+#simg1 {
+    background-color: black;
+    width: 10px;
+    height: 200px;
+    top: 50px;
+    left: 245px;
+    transform-origin: bottom center;
+    transition: transform .2s;
+}
+
 
 body {
     margin: 0;
@@ -34,7 +60,7 @@ p {
     font-size: 90px;
     font-family: Arial, Helvetica, sans-serif;
     position: absolute;
-    top:20%;
+    top: 20%;
     left: 38%;
 
 }
