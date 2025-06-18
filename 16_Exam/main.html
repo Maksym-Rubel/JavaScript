@@ -14,7 +14,9 @@
     <!-- <div>
 
     </div> -->
-
+    <div class="divSearch">
+        <input class="searchpole" type="search">
+    </div>
     <div class="container">
         <div class="menu">
 
@@ -24,11 +26,11 @@
         <div class="first-row">
             <div id="rec1">
                 <div class="white-rectangle">
-                    <img src="./img/cloudy.png" alt="" class="cloudyicon">
+                    <img src=""  alt="" id="spanimage" class="cloudyicons">
                     <div class="fisttext">
                         <div id="temps">
-                            <p class="text">Rivne</p>
-                            <p class="textTemp">24°C</p>
+                            <p class="text"><span id="CitySpan"></span></p>
+                            <p class="textTemp"><span id="TempSpan"></span>°C</p>
                         </div>
                         <div class="line"></div>
                         <div id="idea">
@@ -98,7 +100,7 @@
                                 <img src="./img/tempgarko.png" id="iconses" class="miniIcons">
                                 <div class="textss1">
                                     <p class="texts1">Real Feel</p>
-                                    <p class="texts2">30°</p>
+                                    <p class="texts2"><span id="FeelSpan"></span>°</p>
                                 </div>
                             </div>
                             <br>
@@ -106,7 +108,7 @@
                                 <img src="./img/rainicon.png" id="iconses" class="miniIcons">
                                 <div class="textss1">
                                     <p class="texts1">Chance of rain</p>
-                                    <p class="texts2">0%</p>
+                                    <p class="texts2"><span id="RainSpan"></span>%</p>
                                 </div>
                             </div>
                         </div>
@@ -116,7 +118,7 @@
                                 <img src="./img/wind.png" id="iconses" class="miniIcons">
                                 <div class="textss1">
                                     <p class="texts1">Wind</p>
-                                    <p class="texts2">0.2 km/h</p>
+                                    <p class="texts2"><span id="WindSpan"></span> km/h</p>
                                 </div>
                             </div>
                             <br>

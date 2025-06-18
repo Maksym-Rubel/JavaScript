@@ -37,3 +37,43 @@
 //         }
 //     }
 // });
+let temp = $("#TempSpan");
+let feel = $("#FeelSpan");
+let wind = $("#WindSpan");
+let rain = $("#RainSpan");
+let img = document.getElementById("spanimage");
+let citys = $("#CitySpan");
+
+let defaultCity = "Rivne"
+
+async function getWeather(city)
+{
+    let response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&lang=ua&appid=d4f9129c72ecbcc4ec3898a5d66138d0`);
+    let data = await response.json();
+    if(data.weather[0].main == "Clouds")
+    {
+        img.src = "./img/cloudyFinal.png";
+    }
+    citys.html(city)
+    wind.html(data.wind.speed.toFixed(1))
+    rain.html(data.main.humidity)
+    feel.html(Math.floor(data.main.feels_like))
+    temp.html(Math.floor(data.main.temp))
+
+}
+
+
+
+let search = $(".searchpole");
+
+search.on("keydown",function(event)
+{
+    if(event.key == "Enter" && search.val() !== "")
+    {
+        getWeather(search.val());
+    }
+});
+
+
+
+getWeather(defaultCity);
