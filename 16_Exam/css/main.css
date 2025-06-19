@@ -94,6 +94,7 @@ body {
     color: #605f5f;
     text-align: left;
     margin-left: 30px;
+    max-width: 20px;
 }
 
 .coltext1 {
@@ -236,6 +237,15 @@ body {
 
 
 .weathertab {
+    transition: 
+        color 0.2s,
+        width 0.2s,
+        background-color 0.1s,
+        height 0.2s,
+        box-shadow 0.2s,
+        border-radius 0.2s,
+        margin 0.2s;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -291,7 +301,7 @@ body {
 .miniIcon {
     width: 50px;
     height: 50px;
-    background-image: url(../img/cloudy.png);
+    background-image: url(../img/fallrain.png);
     background-size: cover;
     background-position: center;
     border: 0px solid black;
@@ -307,7 +317,8 @@ body {
     background-size: cover;
     background-position: center;
     border: 0px solid black;
-    display: block;
+    
+    display: flex;
     margin: 0 auto;
 
 }
@@ -465,4 +476,12 @@ body {
     display: block;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0 auto;
+}
+
+
+#themechenger{
+    display: block;
+    margin: 10px auto;
+    width: 50px;
+    height: 50px;
 }
