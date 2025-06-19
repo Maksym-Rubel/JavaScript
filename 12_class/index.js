@@ -124,6 +124,68 @@
 //     .catch(err => console.log(err.message))
 
 
+let colors = [];
+function saveitems() {
+    localStorage.setItem("colors", JSON.stringify(colors));
+}
+const $addBtn = $('#addBtn');
+const $container = $('#container');
+$addBtn.on('click', function () {
+
+    let color = getRandomColor();
+    colors.push(color);
+    saveitems()
+    localStorage.setItem("color", color);
+    const $block = $('<div class="block"></div>');
+    $block.css('background-color', color);
+    $('#container').append($block);
+});
+
+
+
+function getRandomColor() {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    return `rgb(${r}, ${g}, ${b})`;
+}
+
+
+$container.on('click', `.block`, function () {
+    load()
+    $(this).remove();
+    let color = $(this).css("backgroundColor");
+    for (const i of colors) {
+        console.log(i)
+    }
+
+    console.log(color)
+
+    let index = colors.findIndex(item => item == color);
+    console.log(index)
+    if (index !== -1) {
+        colors.splice(index, 1);
+    }
+    saveitems()
+
+});
+
+function load() {
+    colors = JSON.parse(localStorage.getItem("colors")) ?? [];
+}
+function loadandview() {
+    colors = JSON.parse(localStorage.getItem("colors")) ?? [];
+    for (const i of colors) {
+        const $block = $('<div class="block"></div>');
+        $block.css('background-color', i);
+        $('#container').append($block);
+    }
+
+
+}
+document.addEventListener("DOMContentLoaded", () => {
+    loadandview()
+});
 
 let btn1_id = document.getElementById("btn1")
 let cir1_id = document.getElementById("cir1")

@@ -54,7 +54,7 @@ async function getWeather(city)
     {
         img.src = "./img/cloudyFinal.png";
     }
-    citys.html(city)
+    citys.html(city[0].toUpperCase() + city.slice(1))
     wind.html(data.wind.speed.toFixed(1))
     rain.html(data.main.humidity)
     feel.html(Math.floor(data.main.feels_like))
