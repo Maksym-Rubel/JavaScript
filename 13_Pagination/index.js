@@ -30,6 +30,7 @@ function renderMovies(i) {
                                 class="card-img-top" alt="${i.Title}">
                             <div class="card-body text-center">
                                 <h5 class="card-title">${i.Title}</h5>
+                                <p class="card-text">${i.Year}<p>
                             </div>
                         </div>
                     </div> `;
